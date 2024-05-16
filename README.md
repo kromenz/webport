@@ -2,7 +2,7 @@
 
 This repository corresponds to my web portfolio, done using ReactJS.
 
-Check it out by [clicking here](https://webport-gamma.vercel.app)
+Check it out by [clicking here](https://webport-gamma.vercel.app).
 
 ## Stack
 

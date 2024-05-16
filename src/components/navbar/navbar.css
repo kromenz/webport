@@ -105,7 +105,7 @@
   border: 1px solid #a993fe;
 }
 
-@media (amx-width: 425px) {
+@media (max-width: 425px) {
   .logo {
     width: 10rem;
     height: auto;
@@ -114,7 +114,7 @@
 
 @media (max-width: 769px) {
   .menu-btn {
-    display: block;
+    display: flex;
   }
 
   .nav-content ul {
