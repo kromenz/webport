@@ -1,8 +1,6 @@
 
 ### .gitignore
 
-Crie um arquivo chamado `.gitignore` na raiz do seu projeto com o seguinte conteúdo:
-
 ```gitignore
 # Node modules
 node_modules/
@@ -55,7 +53,7 @@ $RECYCLE.BIN/
 
 # Gatsby files
 .cache/
-public/
+
 
 # Vue.js
 *.vue
