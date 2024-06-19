@@ -1,7 +1,7 @@
 export const SKILLS = [
   {
     title: "Frontend",
-    icon: "./assets/images/frontend.png",
+    icon: "/assets/images/frontend.png",
     skills: [
       { skill: "HTML5", percentage: "50%" },
       { skill: "CSS3 (Sass/SCSS)", percentage: "50%" },
@@ -11,7 +11,7 @@ export const SKILLS = [
   },
   {
     title: "Backend",
-    icon: "./assets/images/backend.png",
+    icon: "/assets/images/backend.png",
     skills: [
       { skill: "Node.js", percentage: "50%" },
       { skill: "Express.js", percentage: "30%" },
@@ -19,7 +19,7 @@ export const SKILLS = [
   },
   {
     title: "Databases",
-    icon: "./assets/images/db.png",
+    icon: "/assets/images/db.png",
     skills: [
       { skill: "Postgres", percentage: "70%" },
       { skill: "SQL Server", percentage: "50%" },
@@ -29,7 +29,7 @@ export const SKILLS = [
   },
   {
     title: "Programming Languages",
-    icon: "./assets/images/code.png",
+    icon: "/assets/images/code.png",
     skills: [
       { skill: "Python", percentage: "50%" },
       { skill: "C#", percentage: "30%" },
@@ -40,7 +40,7 @@ export const SKILLS = [
   },
   {
     title: "Tools",
-    icon: "./assets/images/tools.png",
+    icon: "/assets/images/tools.png",
     skills: [
       { skill: "Git & GitHub", percentage: "75%" },
       { skill: "Visual Studio Code", percentage: "75%" },
@@ -50,7 +50,7 @@ export const SKILLS = [
   },
   {
     title: "Soft Skills",
-    icon: "./assets/images/soft-skills.png",
+    icon: "/assets/images/soft-skills.png",
     skills: [
       { skill: "Problem-solving", percentage: "75%" },
       { skill: "Teamwork", percentage: "80%" },
