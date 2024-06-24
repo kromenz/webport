@@ -64,31 +64,72 @@ export const SKILLS = [
 
 export const PROJECTS = [
   {
-    title: "Senior Frontend Developer at Tech Innovators",
-    resume: [
-      "Led a team of frontend developers in the redesign of the company's flagship product, resulting in a 30% increase in user engagement.",
-      "Implemented advanced CSS animations and transitions to enhance the overall user experience.",
-      "Collaborated with UX/UI designers to translate wireframes and mockups into responsive and interactive web applications.",
-      "Introduced and integrated Vue.js into the tech stack, improving code maintainability and development efficiency.",
-    ],
+    title: "XML_Parsing - RPC_Server",
+    imageUrl: "/assets/images/xml.png",
+    description:
+      "XML file into a relational database. First we have a non-relational database, where we make X-Path queries. Then the data is processed, and goes into a relational database. API's where created to make queries.",
+    githubUrl: "https://github.com/DiogoBernardes/TP2-IS",
+    videoUrl: "https://youtu.be/s4XdCShQvlY",
   },
   {
-    title: "Junior Web Developer at Digital Solution",
-    resume: [
-      "Developed and maintained client websites, ensuring high-quality standards and timely project delivery.",
-      "Implemented SEO best practices, leading to a 25% increase in organic search traffic for key clients.",
-      "Worked closely with the design team to create pixel-perfect, cross-browser-compatible web pages.",
-      "Conducted code reviews and mentored junior developers in adopting best coding practices.",
-    ],
+    title: "T-Pot Honeypot",
+    imageUrl: "/assets/images/honey.png",
+    description:
+      "In this project, T-Pot was installed in a Google Cloud instance, using the repository linked below. Gathering valuable information from the hackers attacks, and then analysing it for a mini project.",
+    githubUrl: "https://github.com/telekom-security/tpotce",
+    videoUrl: "https://youtu.be/fe6f_AdqOiM",
   },
   {
-    title: "Frontend Intern at Web Studio",
-    resume: [
-      "Assisted in the development of a new e-commerce platform, contributing to the implementation of frontend features.",
-      "Conducted performance optimization tasks, resulting in a 15% improvement in page load times.",
-      "Participated in daily stand-up meetings and collaborated with senior developers to troubleshoot and resolve issues.",
-      "Gained hands-on experience with version control systems, specifically Git, in a collaborative development environment.",
-    ],
+    title: "Journeys - Mobile App",
+    imageUrl: "/assets/images/journeys.png",
+    description:
+      "This app has the purpose to be a travels management app, allowing users to create trips, share those trips, add locations to the trips, etc. For this project, an API was made.  ",
+    githubUrl: "https://github.com/yourusername/project3",
+    videoUrl: "https://youtu.be/y3Dcxy0BGRA",
+  },
+  {
+    title: "Talent Management App",
+    imageUrl: "/assets/images/c_sharp.png",
+    description: "In C#, this project is a talent management web app.",
+    githubUrl: "https://github.com/kromenz/TP-ES2",
+    videoUrl: "https://youtu.be/LIPNNmdEoNg",
+  },
+  {
+    title: "Majorities Board Game w/ AI",
+    imageUrl: "/assets/images/maj.png",
+    description:
+      "In Python, this project consists in the Majorities Board game, can be played in duos, or against the computer, with the Random, Monte Carlo and Greedy algorithms.",
+    githubUrl: "https://github.com/kromenz/Majorities",
+    videoUrl: "https://youtu.be/KBlNqazdbkM",
+  },
+  {
+    title: "Web Scrapping / Sentiment Analysis",
+    imageUrl: "/assets/images/aoop_tp3.png",
+    description:
+      "In this project, a Python script was made to scrap information in the IMDb website, to gather comments in movies. After, using a notebook created in Kaggle, the dataset is processed and given the positive or negative quotation. Then this information is passed to Kibana, using Elastic. The dashboard created gives a visual interpretation of the data gathered.",
+    githubUrl: "https://github.com/diogoPinheiro11/tp3-project",
+    videoUrl: "https://www.youtube.com/watch?v=zZJqdd4O98g",
+  },
+  {
+    title: "Phaser Racing Game",
+    imageUrl: "/assets/images/phaser.png",
+    description:
+      "In this project, a racing game in 2D, using the Phaser Framework.",
+    githubUrl: "https://github.com/kromenz/TECMUL---TP1---28234",
+  },
+  {
+    title: "PHP Expense Management App",
+    imageUrl: "/assets/images/php.png",
+    description:
+      "This project is an Expense Managament Web App, using PHP for backend, and HTML, Bootstrap for the frontend.",
+    githubUrl: "https://github.com/diogoPinheiro11/php-project",
+  },
+  {
+    title: "Borgwarner Testing Apps",
+    imageUrl: "/assets/images/borg.png",
+    description:
+      "In cooperation with Borgwarner, this project was degined to investigate applications that provided usefull insights in testing of web apps, in this case a Python web app. ",
+    githubUrl: "https://github.com/diogoPinheiro11/borgwarner-test-app",
   },
 ];
 
@@ -107,7 +148,7 @@ export const WORK_EXPERIENCE = [
     ],
   },
   {
-    title: "More Work Soon",
+    title: "More Work Coming Soon",
     date: "Present",
     responsibilities: [],
   },
