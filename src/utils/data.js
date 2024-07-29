@@ -148,8 +148,15 @@ export const WORK_EXPERIENCE = [
     ],
   },
   {
-    title: "More Work Coming Soon",
-    date: "Present",
-    responsibilities: [],
+    title: "BorgWarner (Summer Internship)",
+    date: "July 2024 - August 2024",
+    responsibilities: [
+      "I began my internship at BorgWarner focusing on integrating Jasper with Python to generate various reports for the factory's production lines. My key responsibilities include:" +
+        " Developing Python scripts to interface with JasperReports for automated report generation." +
+        " Reworking and customizing detailed reports to meet the diverse needs of different production lines." +
+        " Collaborating with team members to troubleshoot and resolve any issues related to data and report generation.",
+      "Developed an application from scratch for suggestions, allowing operators or any company personnel to make suggestions for improvements within the company." +
+        "A supervisor would then be assigned to evaluate the proposal. If deemed viable, the supervisor would oversee the implementation process.",
+    ],
   },
 ];

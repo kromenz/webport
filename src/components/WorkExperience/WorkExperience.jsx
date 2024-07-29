@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./WorkExperience.css";
 import { WORK_EXPERIENCE } from "../../utils/data";
 import ExperienceCard from "./ExperienceCard/ExperienceCard";
@@ -6,6 +6,24 @@ import Slider from "react-slick";
 
 const WorkExperience = () => {
   const sliderRef = useRef();
+  const [workExperience, setWorkExperience] = useState([]);
+  const [isAscending, setIsAscending] = useState(false);
+
+  useEffect(() => {
+    // Ordenar as experiências de trabalho por data de forma decrescente por padrão
+    const sortedExperience = [...WORK_EXPERIENCE].sort(
+      (a, b) =>
+        new Date(b.date.split(" - ")[0]) - new Date(a.date.split(" - ")[0])
+    );
+    setWorkExperience(sortedExperience);
+  }, []);
+
+  const toggleSortOrder = () => {
+    const sortedExperience = [...workExperience].reverse();
+    setWorkExperience(sortedExperience);
+    setIsAscending(!isAscending);
+  };
+
   const settings = {
     dots: false,
     infinite: true,
@@ -34,7 +52,12 @@ const WorkExperience = () => {
 
   return (
     <section id="work" className="experience-container">
-      <h5>Work Experience</h5>
+      <div className="experience-header">
+        <h5>Work Experience</h5>
+        <button onClick={toggleSortOrder} className="sort-button">
+          {isAscending ? "Sort Descending" : "Sort Ascending"}
+        </button>
+      </div>
       <div className="experience-content">
         <div className="arrow-right" onClick={slideRight}>
           <span className="material-symbols-outlined">chevron_right</span>
@@ -44,7 +67,7 @@ const WorkExperience = () => {
           <span className="material-symbols-outlined">chevron_left</span>
         </div>
         <Slider ref={sliderRef} {...settings}>
-          {WORK_EXPERIENCE.map((item) => (
+          {workExperience.map((item) => (
             <ExperienceCard key={item.title} details={item} />
           ))}
         </Slider>
