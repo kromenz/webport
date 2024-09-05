@@ -157,6 +157,7 @@ export const WORK_EXPERIENCE = [
         " Collaborating with team members to troubleshoot and resolve any issues related to data and report generation.",
       "Developed an application from scratch for suggestions, allowing operators or any company personnel to make suggestions for improvements within the company." +
         "A supervisor would then be assigned to evaluate the proposal. If deemed viable, the supervisor would oversee the implementation process.",
+      "Throughout my internship, I was fully integrated into the department's processes and was consistently tested in various situations, always making myself available to assist wherever needed.",
     ],
   },
 ];

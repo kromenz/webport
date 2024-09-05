@@ -3,6 +3,7 @@ import "./navbar.css";
 import MobileNav from "./MobileNav/MobileNav";
 import PDF from "../../CV.pdf";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -14,6 +15,11 @@ const Navbar = () => {
     window.open(PDF, "_blank");
   };
 
+  const menuItemVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <>
       <MobileNav isOpen={openMenu} toggleMenu={toggleMenu} />
@@ -22,35 +28,62 @@ const Navbar = () => {
           <img className="logo" src="./assets/images/logo.png" alt="" />
 
           <ul>
-            <li>
+            <motion.li
+              variants={menuItemVariants}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 0.1, duration: 0.3 }}>
               <AnchorLink className="anchor-link" href="#home">
-                <a className="menu-item">Home</a>
+                <motion.a className="menu-item">Home</motion.a>
               </AnchorLink>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li
+              variants={menuItemVariants}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 0.2, duration: 0.3 }}>
               <AnchorLink className="anchor-link" offset={50} href="#skills">
-                <a className="menu-item">Skills</a>
+                <motion.a className="menu-item">Skills</motion.a>
               </AnchorLink>
-            </li>
-            <li>
-              <AnchorLink className="anchor-link" offset={50} href="#projects">
-                <a className="menu-item">Projects</a>
-              </AnchorLink>
-            </li>
-            <li>
-              <AnchorLink className="anchor-link" offset={50} href="#work">
-                <a className="menu-item">Work Experience</a>
-              </AnchorLink>
-            </li>
-            <li>
-              <AnchorLink className="anchor-link" offset={50} href="#contact">
-                <a className="menu-item">Contact Me</a>
-              </AnchorLink>
-            </li>
+            </motion.li>
 
-            <button className="contact-btn" onClick={openPDF}>
+            <motion.li
+              variants={menuItemVariants}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 0.3, duration: 0.3 }}>
+              <AnchorLink className="anchor-link" offset={50} href="#projects">
+                <motion.a className="menu-item">Projects</motion.a>
+              </AnchorLink>
+            </motion.li>
+
+            <motion.li
+              variants={menuItemVariants}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 0.4, duration: 0.3 }}>
+              <AnchorLink className="anchor-link" offset={50} href="#work">
+                <motion.a className="menu-item">Work Experience</motion.a>
+              </AnchorLink>
+            </motion.li>
+
+            <motion.li
+              variants={menuItemVariants}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 0.5, duration: 0.3 }}>
+              <AnchorLink className="anchor-link" offset={50} href="#contact">
+                <motion.a className="menu-item">Contact Me</motion.a>
+              </AnchorLink>
+            </motion.li>
+
+            <motion.button
+              className="contact-btn"
+              onClick={openPDF}
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 300 }}>
               My CV
-            </button>
+            </motion.button>
           </ul>
           <button className="menu-btn" onClick={toggleMenu}>
             <span
