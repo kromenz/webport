@@ -2,6 +2,8 @@ import React from "react";
 import "./ContactMe.css";
 import ContactInfoCard from "./ContactInfoCard/ContactInfoCard";
 import ContactForm from "./ContactForm/ContactForm";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const ContactMe = () => {
   return (
@@ -10,17 +12,17 @@ const ContactMe = () => {
       <div className="contact-content">
         <div style={{ flex: 1 }}>
           <ContactInfoCard
-            iconUrl="/assets/images/gmail.png"
+            icon={faEnvelope}
             text="andrerafael892@gmail.com"
             href="mailto:andrerafael892@gmail.com"
           />
           <ContactInfoCard
-            iconUrl="/assets/images/github.png"
+            icon={faGithub}
             text="github.com/kromenz"
             href="https://github.com/kromenz"
           />
           <ContactInfoCard
-            iconUrl="/assets/images/linkedin.png"
+            icon={faLinkedin}
             text="linkdin"
             href="https://linkedin.com/in/rafael-andré/"
           />

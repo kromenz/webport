@@ -136,7 +136,7 @@ export const PROJECTS = [
 export const WORK_EXPERIENCE = [
   {
     title: "Waiter at Petiscas Restaurant (Summer Job)",
-    date: "July 2022 - September 2022",
+    date: "Jul 2022 - Sep 2022",
     responsibilities: [
       "Provided excellent customer service, ensuring quick and efficient service which resulted in positive feedback and increased customer satisfaction.",
       "Managed reservations and table organization to optimize the restaurant's capacity during peak hours.",
@@ -149,7 +149,7 @@ export const WORK_EXPERIENCE = [
   },
   {
     title: "BorgWarner (Summer Internship)",
-    date: "July 2024 - August 2024",
+    date: "Jul 2024 - Aug 2024",
     responsibilities: [
       "I began my internship at BorgWarner focusing on integrating Jasper with Python to generate various reports for the factory's production lines. My key responsibilities include:" +
         " Developing Python scripts to interface with JasperReports for automated report generation." +
@@ -158,6 +158,18 @@ export const WORK_EXPERIENCE = [
       "Developed an application from scratch for suggestions, allowing operators or any company personnel to make suggestions for improvements within the company." +
         "A supervisor would then be assigned to evaluate the proposal. If deemed viable, the supervisor would oversee the implementation process.",
       "Throughout my internship, I was fully integrated into the department's processes and was consistently tested in various situations, always making myself available to assist wherever needed.",
+    ],
+  },
+  {
+    title: "BorgWarner (Professional Internship)",
+    date: "Sep 2024 - Present",
+    responsibilities: [
+      "I am continuing my internship at BorgWarner, now focusing on the development of a new Maintenance Management System (MMS) application, which will manage all aspects related to maintenance in the factory. My responsibilities include:" +
+        " Developing Python scripts to integrate with reporting systems, optimizing the generation and customization of reports." +
+        " Implementing new features and improvements for the suggestions application, facilitating the submission and evaluation of proposals." +
+        " Collaborating with the Digital Transformation team to understand departmental needs and propose effective technological solutions.",
+      "Continuing to develop and customize detailed reports to meet the specific needs of different production lines." +
+        " My integration into the department's processes remains strong, and I continue to make myself available to assist whenever needed.",
     ],
   },
 ];
