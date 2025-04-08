@@ -151,12 +151,13 @@ export const WORK_EXPERIENCE = [
     title: "BorgWarner (Summer Internship)",
     date: "Jul 2024 - Aug 2024",
     responsibilities: [
-      "I began my internship at BorgWarner focusing on integrating Jasper with Python to generate various reports for the factory's production lines. My key responsibilities include:" +
-        " Developing Python scripts to interface with JasperReports for automated report generation." +
-        " Reworking and customizing detailed reports to meet the diverse needs of different production lines." +
-        " Collaborating with team members to troubleshoot and resolve any issues related to data and report generation.",
-      "Developed an application from scratch for suggestions, allowing operators or any company personnel to make suggestions for improvements within the company." +
-        "A supervisor would then be assigned to evaluate the proposal. If deemed viable, the supervisor would oversee the implementation process.",
+      "I began my internship at BorgWarner focusing on integrating Jasper with Python to generate various reports for the factory's production lines. My key responsibilities include:",
+      [
+        "Developing Python scripts to interface with JasperReports for automated report generation;",
+        "Reworking and customizing detailed reports to meet the diverse needs of different production lines;",
+        "Collaborating with team members to troubleshoot and resolve any issues related to data and report generation.",
+      ],
+      "Developed an application from scratch for suggestions, allowing operators or any company personnel to make proposals for improvements. A supervisor would then be assigned to evaluate and, if viable, oversee the implementation process.",
       "Throughout my internship, I was fully integrated into the department's processes and was consistently tested in various situations, always making myself available to assist wherever needed.",
     ],
   },
@@ -164,12 +165,19 @@ export const WORK_EXPERIENCE = [
     title: "BorgWarner (Professional Internship)",
     date: "Sep 2024 - Present",
     responsibilities: [
-      "I am continuing my internship at BorgWarner, now focusing on the development of a new Maintenance Management System (MMS) application, which will manage all aspects related to maintenance in the factory. My responsibilities include:" +
-        " Developing Python scripts to integrate with reporting systems, optimizing the generation and customization of reports." +
-        " Implementing new features and improvements for the suggestions application, facilitating the submission and evaluation of proposals." +
-        " Collaborating with the Digital Transformation team to understand departmental needs and propose effective technological solutions.",
-      "Continuing to develop and customize detailed reports to meet the specific needs of different production lines." +
-        " My integration into the department's processes remains strong, and I continue to make myself available to assist whenever needed.",
+      "I am continuing my internship at BorgWarner, focusing on the development of a new project, Maintenance Management System (MMS). This system streamlines all aspects of factory maintenance.",
+
+      "Key contributions and features of the MMS include:",
+
+      [
+        "Frontend Interface for SAP: enables the opening/closing of corrective and preventive work orders, including autonomous (operator-led) and predictive maintenance modules.",
+        "Real-Time Notifications: sends SMS alerts to technicians when maintenance is requested, logs technician inputs (e.g., time tracking, photos upload).",
+        "System Integration and Reporting: transfers data to SAP via RPA and auto-generates shift/daily reports (using Jasper).",
+      ],
+
+      "I also collaborate with the Digital Transformation team to identify the factory needs, refine system features, and ensure seamless integration with existing SAP workflows.",
+
+      "My involvement in this MMS project demonstrates my ability to manage complex, multi-faceted initiatives in a demanding production environment.",
     ],
   },
 ];
