@@ -4,6 +4,7 @@ import MobileNav from "./MobileNav/MobileNav";
 import PDF from "../../CV.pdf";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { motion } from "framer-motion";
+import GradientText from "../../blocks/GradientText/GradientText";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -34,7 +35,13 @@ const Navbar = () => {
               animate="visible"
               transition={{ delay: 0.1, duration: 0.3 }}>
               <AnchorLink className="anchor-link" href="#home">
-                <motion.a className="menu-item">Home</motion.a>
+                <motion.a className="menu-item">
+                  <GradientText
+                    colors={["#7c66e3", "#8e44ad", "#6c3483", "#9b59b6"]}
+                    speed={3}>
+                    Home
+                  </GradientText>
+                </motion.a>
               </AnchorLink>
             </motion.li>
             <motion.li
