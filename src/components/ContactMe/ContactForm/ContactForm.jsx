@@ -58,6 +58,7 @@ const ContactForm = () => {
         <textarea
           name="message"
           placeholder="Message"
+          rows="5"
           value={formData.message}
           onChange={handleChange}></textarea>
         <button type="submit">SEND</button>

@@ -1,12 +1,19 @@
 import React from "react";
 import "./Hero.css";
+import { motion } from "framer-motion";
 import BlurText from "../../blocks/BlurText/BlurText";
 import ShinyText from "../../blocks/ShinyText/ShinyText";
-import StarBorder from "../../animations/StarBorder/StarBorder";
 
 const Hero = () => {
   return (
-    <section id="home" className="hero-container">
+    <motion.section
+      id="home"
+      className="hero-container"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -50 }}
+      viewport={{ once: false, amount: 0.4 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}>
       <div className="hero-content">
         <h2 className="text-white">
           <ShinyText
@@ -47,7 +54,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

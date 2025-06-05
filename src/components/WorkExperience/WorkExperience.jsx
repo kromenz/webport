@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import "./WorkExperience.css";
+import { motion } from "framer-motion";
 import { WORK_EXPERIENCE } from "../../utils/data";
 import ExperienceCard from "./ExperienceCard/ExperienceCard";
 import Slider from "react-slick";
@@ -10,7 +11,6 @@ const WorkExperience = () => {
   const [isAscending, setIsAscending] = useState(false);
 
   useEffect(() => {
-    // Ordenar as experiências de trabalho por data de forma decrescente por padrão
     const sortedExperience = [...WORK_EXPERIENCE].sort(
       (a, b) =>
         new Date(b.date.split(" - ")[0]) - new Date(a.date.split(" - ")[0])
@@ -51,7 +51,14 @@ const WorkExperience = () => {
   };
 
   return (
-    <section id="work" className="experience-container">
+    <motion.section
+      id="work"
+      className="experience-container"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -50 }}
+      viewport={{ once: false, amount: 0.4 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}>
       <div className="experience-header">
         <h5>Work Experience</h5>
         <button onClick={toggleSortOrder} className="sort-button">
@@ -72,7 +79,7 @@ const WorkExperience = () => {
           ))}
         </Slider>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -3,8 +3,8 @@ export const SKILLS = [
     title: "Frontend",
     icon: "/assets/images/frontend.png",
     skills: [
-      { skill: "HTML5", percentage: "50%" },
-      { skill: "CSS3 (Sass/SCSS)", percentage: "50%" },
+      { skill: "HTML5", percentage: "75%" },
+      { skill: "CSS3 (Sass/SCSS)", percentage: "60%" },
       { skill: "JavaScript", percentage: "50%" },
       { skill: "React.js", percentage: "50%" },
     ],
@@ -22,7 +22,7 @@ export const SKILLS = [
     icon: "/assets/images/db.png",
     skills: [
       { skill: "Postgres", percentage: "70%" },
-      { skill: "SQL Server", percentage: "50%" },
+      { skill: "SQL Server", percentage: "80%" },
       { skill: "Mongo DB", percentage: "30%" },
       { skill: "Firebase", percentage: "50%" },
     ],
@@ -33,6 +33,7 @@ export const SKILLS = [
     skills: [
       { skill: "Python", percentage: "50%" },
       { skill: "C#", percentage: "30%" },
+      { skill: "C", percentage: "30%" },
       { skill: "PHP", percentage: "30%" },
       { skill: "Kotlin", percentage: "50%" },
       { skill: "JAVA", percentage: "30%" },
