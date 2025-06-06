@@ -2,11 +2,26 @@
   max-width: 1300px !important;
   margin: 0 auto;
   position: relative;
-  padding: 2rem 1.5rem;
+  padding: 2rem 1.1rem;
 }
 
 @media (max-width: 1300px) {
   .container {
     padding: 0 1.5rem;
   }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
