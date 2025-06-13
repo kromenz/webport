@@ -10,3 +10,18 @@
     padding: 0 1.5rem;
   }
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
