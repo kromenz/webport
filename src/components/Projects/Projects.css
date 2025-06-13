@@ -1,6 +1,22 @@
 .projects-container {
-  margin: 4rem 0;
   position: relative;
+  margin: 4rem 0;
+}
+
+.particles-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.projects-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem 1rem;
 }
 
 .projects-container h5 {
@@ -78,4 +94,14 @@
   .arrow-right {
     right: -1rem;
   }
+}
+
+.projects-container > .particles-container.particles-bg {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  pointer-events: none;
 }
