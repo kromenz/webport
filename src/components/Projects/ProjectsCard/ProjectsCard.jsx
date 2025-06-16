@@ -1,5 +1,7 @@
 import React from "react";
 import "./ProjectsCard.css";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ProjectsCard = ({
   title,
@@ -20,11 +22,7 @@ const ProjectsCard = ({
           rel="noopener noreferrer"
           className="project-link">
           View on GitHub
-          <img
-            src="./assets/images/arrow.png"
-            alt="GitHub Icon"
-            className="github-icon"
-          />
+          <FontAwesomeIcon icon={faGithub} className="github-icon" />
         </a>
         {videoUrl && (
           <div className="project-video-indicator">

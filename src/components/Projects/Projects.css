@@ -1,6 +1,37 @@
 .projects-container {
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   position: relative;
-  margin: 4rem 0;
+  z-index: 1;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.projects-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  overflow: visible !important;
+}
+.slick-list {
+  padding: 15px !important;
+}
+
+.projects-content .slick-list {
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+}
+
+.projects-content .slick-track,
+.projects-content .slick-slide {
+  overflow: visible !important;
 }
 
 .particles-bg {
@@ -11,12 +42,6 @@
   bottom: 0;
   z-index: 0;
   pointer-events: none;
-}
-
-.projects-content {
-  position: relative;
-  z-index: 1;
-  padding: 2rem 1rem;
 }
 
 .projects-container h5 {
@@ -43,18 +68,9 @@
 
 .arrow-left,
 .arrow-right {
-  width: 2.2rem;
-  height: 2.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #6751b9;
-  border-radius: 0.65rem;
-  border: 1.5px solid #6751b9;
-  position: absolute;
-  top: 55%;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 2;
-  cursor: pointer;
 }
 
 .arrow-left span,
@@ -66,12 +82,11 @@
 .arrow-left {
   left: -2rem;
 }
-
 .arrow-right {
   right: -2rem;
 }
 
-@media (max-width: 1025px) {
+(max-width: 1025px) {
   .arrow-left {
     left: 0rem;
   }

@@ -13,16 +13,30 @@ const Projects = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 600,
     slidesToShow: 2,
     slidesToScroll: 1,
     arrows: false,
+    centerMode: true,
+    centerPadding: "80px",
+    cssEase: "ease-out",
     responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          centerMode: true,
+          centerPadding: "40px",
+        },
+      },
       {
         breakpoint: 769,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerMode: true,
+          centerPadding: "20px",
         },
       },
     ],
