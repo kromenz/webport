@@ -2,34 +2,14 @@ import React from "react";
 import "./Hero.css";
 import { motion } from "framer-motion";
 import ShinyText from "../../blocks/ShinyText/ShinyText";
-
-const textContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.05,
-      delayChildren: 0.2,
-    },
-  },
-};
-
-const letterVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.4,
-      ease: "easeOut",
-    },
-  },
-};
+import DecryptText from "../../blocks/DecryptText/DecryptText";
 
 const Hero = () => {
   const sentence =
-    "Passionate Software Developer. Transforming ideas into seamless and visually engaging web solutions.";
-  const words = sentence.split(" ");
+    "Passionate Software Developer.\n" +
+    "Transforming ideas into seamless\n" +
+    "and visually engaging web solutions.";
+
   return (
     <motion.section
       id="home"
@@ -49,36 +29,12 @@ const Hero = () => {
           />
         </h2>
 
-        <motion.p
+        <DecryptText
+          text={sentence}
+          speed={60}
+          threshold={0.3}
           className="animated-text"
-          variants={textContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
-          style={{ display: "inline-block", overflow: "hidden" }}>
-          {words.map((word, wi) => {
-            const letters = word.split("");
-            return (
-              <motion.span
-                key={wi}
-                style={{
-                  display: "inline-block",
-                  whiteSpace: "nowrap",
-                  marginRight: "0.25rem",
-                }}
-                variants={textContainer}>
-                {letters.map((char, li) => (
-                  <motion.span
-                    key={li}
-                    variants={letterVariants}
-                    style={{ display: "inline-block" }}>
-                    {char}
-                  </motion.span>
-                ))}
-              </motion.span>
-            );
-          })}
-        </motion.p>
+        />
       </div>
       <div className="hero-img">
         <div>

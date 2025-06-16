@@ -56,3 +56,5 @@ $RECYCLE.BIN/
 
 # Vue.js
 *.vue
+
+cache/
