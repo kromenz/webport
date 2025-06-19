@@ -22,7 +22,7 @@
 }
 
 .projects-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   animation: glow 1.5s ease-in-out infinite alternate;
   border-color: #8a75d6;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25), 0 8px 12px rgba(0, 0, 0, 0.2);

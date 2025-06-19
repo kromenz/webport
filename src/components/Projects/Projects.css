@@ -17,11 +17,12 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 2rem 3rem 2rem 1rem;
   overflow: visible !important;
 }
+
 .slick-list {
-  padding: 15px !important;
+  padding: 0.9rem !important;
 }
 
 .projects-content .slick-list {

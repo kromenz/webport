@@ -18,7 +18,7 @@ const Projects = () => {
     slidesToScroll: 1,
     arrows: false,
     centerMode: true,
-    centerPadding: "0.7rem",
+    centerPadding: "60px",
     cssEase: "ease-out",
     responsive: [
       {

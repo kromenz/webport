@@ -8,7 +8,6 @@ const ExperienceCard = ({ details }) => {
       <div className="work-duration">{details.date}</div>
       <ul>
         {details.responsibilities.map((item, index) => {
-          // If the item is an array, render a nested list
           if (Array.isArray(item)) {
             return (
               <ul key={index} className="nested-list">
@@ -18,7 +17,6 @@ const ExperienceCard = ({ details }) => {
               </ul>
             );
           }
-          // Otherwise, render a normal list item
           return <li key={index}>{item}</li>;
         })}
       </ul>
