@@ -69,9 +69,18 @@
 
 .arrow-left,
 .arrow-right {
-  top: 50%;
-  transform: translateY(-50%);
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6751b9;
+  border-radius: 0.65rem;
+  border: 1.5px solid #6751b9;
+  position: absolute;
+  top: 55%;
   z-index: 2;
+  cursor: pointer;
 }
 
 .arrow-left span,
@@ -83,17 +92,73 @@
 .arrow-left {
   left: -2rem;
 }
+
 .arrow-right {
-  right: -3rem;
+  right: -4rem;
 }
 
-(max-width: 1025px) {
+@media (max-width: 1399px) {
   .arrow-left {
-    left: 0rem;
+    left: -0.7rem;
   }
 
   .arrow-right {
-    right: 0rem;
+    right: -2.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .arrow-left,
+  .arrow-right {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .arrow-left span,
+  .arrow-right span {
+    font-size: 1.5rem !important;
+    font-weight: 500;
+  }
+
+  .arrow-left {
+    left: 0.6rem;
+  }
+
+  .arrow-right {
+    right: 0.8rem;
+  }
+
+  .particles-bg {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .arrow-left,
+  .arrow-right {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .arrow-left span,
+  .arrow-right span {
+    font-size: 1.7rem !important;
+    font-weight: 500;
+  }
+
+  .arrow-left {
+    left: 1.2rem;
+  }
+
+  .arrow-right {
+    right: 1.6rem;
+  }
+}
+
+@media (max-width: 590px) {
+  .arrow-left,
+  .arrow-right {
+    display: none;
   }
 }
 
@@ -101,14 +166,6 @@
   .projects-container h5 {
     font-size: 1.3rem;
     margin-bottom: 2rem;
-  }
-
-  .arrow-left {
-    left: -1rem;
-  }
-
-  .arrow-right {
-    right: -1rem;
   }
 }
 

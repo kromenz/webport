@@ -165,3 +165,15 @@
   color: #ffffff;
   animation: github-bounce 0.6s ease infinite;
 }
+
+@media (max-width: 1024px) {
+  .projects-card {
+    padding: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-card {
+    margin: 0 1.6rem;
+  }
+}

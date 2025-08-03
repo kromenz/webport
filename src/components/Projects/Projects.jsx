@@ -18,7 +18,7 @@ const Projects = () => {
     slidesToScroll: 1,
     arrows: false,
     centerMode: true,
-    centerPadding: "60px",
+    centerPadding: "50px",
     cssEase: "ease-out",
     responsive: [
       {
@@ -37,6 +37,17 @@ const Projects = () => {
           slidesToScroll: 1,
           centerMode: true,
           centerPadding: "20px",
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          autoplay: true,
+          autoplaySpeed: 15000,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+          centerPadding: "5px",
         },
       },
     ],

@@ -66,11 +66,11 @@ const WorkExperience = () => {
         </button>
       </div>
       <div className="experience-content">
-        <div className="arrow-right" onClick={slideRight}>
+        <div className="arrow-right-we" onClick={slideRight}>
           <span className="material-symbols-outlined">chevron_right</span>
         </div>
 
-        <div className="arrow-left" onClick={slideLeft}>
+        <div className="arrow-left-we" onClick={slideLeft}>
           <span className="material-symbols-outlined">chevron_left</span>
         </div>
         <Slider ref={sliderRef} {...settings}>

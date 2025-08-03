@@ -29,8 +29,8 @@
   background-color: #8a75d6;
 }
 
-.arrow-left,
-.arrow-right {
+.arrow-left-we,
+.arrow-right-we {
   width: 2.2rem;
   height: 2.2rem;
   display: flex;
@@ -45,41 +45,82 @@
   cursor: pointer;
 }
 
-.arrow-left span,
-.arrow-right span {
+.arrow-left-we span,
+.arrow-right-we span {
   font-size: 2rem;
   font-weight: 500;
 }
 
-.arrow-left {
+.arrow-left-we {
   left: -2rem;
 }
 
-.arrow-right {
-  right: -2rem;
+.arrow-right-we {
+  right: -4rem;
 }
 
-@media (max-width: 1025px) {
-  .arrow-left {
-    left: 0rem;
+@media (max-width: 1399px) {
+  .arrow-left-we {
+    left: -0.7rem;
   }
 
-  .arrow-right {
-    right: 0rem;
+  .arrow-right-we {
+    right: -2.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .arrow-left-we,
+  .arrow-right-we {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .arrow-left-we span,
+  .arrow-right-we span {
+    font-size: 1.5rem !important;
+    font-weight: 500;
+  }
+
+  .arrow-left-we {
+    left: -0.9rem;
+  }
+
+  .arrow-right-we {
+    right: -1.5rem;
   }
 }
 
 @media (max-width: 768px) {
+  .arrow-left-we,
+  .arrow-right-we {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  .arrow-left-we span,
+  .arrow-right-we span {
+    font-size: 1.2rem !important;
+    font-weight: 500;
+  }
+
+  .arrow-left-we {
+    left: -0.7rem;
+  }
+
+  .arrow-right-we {
+    right: -0.7rem;
+  }
+
   .experience-container h5 {
     font-size: 1.3rem;
     margin-bottom: 2rem;
   }
+}
 
-  .arrow-left {
-    left: -1rem;
-  }
-
-  .arrow-right {
-    right: -1rem;
+@media (max-width: 590px) {
+  .arrow-left-we,
+  .arrow-right-we {
+    display: none;
   }
 }
