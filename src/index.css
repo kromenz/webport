@@ -1,13 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
 
 * {
-  font-family: "Poppins", sans-serif;
   margin: 0;
   box-sizing: border-box;
 }
 
 body {
+  font-family: "JetBrains Mono", "Poppins", monospace;
   color: #fff;
   background-color: #060417;
+}
+
+code,
+pre,
+.mono {
+  font-family: "JetBrains Mono", monospace;
+  font-variant-ligatures: contextual;
+  font-feature-settings: "liga" 1, "calt" 1;
 }

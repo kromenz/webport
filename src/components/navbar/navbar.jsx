@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./navbar.css";
 import MobileNav from "./MobileNav/MobileNav";
-import PDF from "../../CV.pdf";
+import PDF from "../../Rafael_Andre_CV.pdf";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { motion } from "framer-motion";
 
@@ -25,8 +25,6 @@ const Navbar = () => {
       <MobileNav isOpen={openMenu} toggleMenu={toggleMenu} />
       <nav className="nav-wrapper">
         <div className="nav-content">
-          <img className="logo" src="./assets/images/logo.png" alt="" />
-
           <ul>
             <motion.li
               variants={menuItemVariants}
@@ -78,7 +76,7 @@ const Navbar = () => {
             </motion.li>
 
             <motion.button
-              className="contact-btn"
+              className="cv-btn"
               onClick={openPDF}
               whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 300 }}>

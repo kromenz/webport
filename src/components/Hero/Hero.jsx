@@ -6,7 +6,7 @@ import DecryptText from "../../blocks/DecryptText/DecryptText";
 
 const Hero = () => {
   const sentence =
-    "Passionate Software Developer.\n" +
+    "A passionate Software Developer.\n" +
     "Transforming ideas into seamless\n" +
     "and visually engaging web solutions.";
 
@@ -21,8 +21,9 @@ const Hero = () => {
       transition={{ duration: 0.6, ease: "easeOut" }}>
       <div className="hero-content">
         <h2 className="text-white">
+          Hello I'm
           <ShinyText
-            text="Building Digital Experiences That Inspire"
+            text="Rafael André"
             disabled={false}
             speed={3}
             colors={["#FFFFFF", "#FFD700", "#FFFFFF"]}

@@ -5,7 +5,7 @@ export const SKILLS = [
     skills: [
       { skill: "HTML5", percentage: "75%" },
       { skill: "CSS3 (Sass/SCSS)", percentage: "60%" },
-      { skill: "JavaScript", percentage: "50%" },
+      { skill: "Tailwind", percentage: "60%" },
       { skill: "React.js", percentage: "50%" },
     ],
   },
@@ -25,6 +25,7 @@ export const SKILLS = [
       { skill: "SQL Server", percentage: "80%" },
       { skill: "Mongo DB", percentage: "30%" },
       { skill: "Firebase", percentage: "50%" },
+      { skill: "Neo4J", percentage: "20%" },
     ],
   },
   {
@@ -37,6 +38,8 @@ export const SKILLS = [
       { skill: "PHP", percentage: "30%" },
       { skill: "Kotlin", percentage: "50%" },
       { skill: "JAVA", percentage: "30%" },
+      { skill: "JavaScript", percentage: "50%" },
+      { skill: "Typescript", percentage: "30%" },
     ],
   },
   {
@@ -47,8 +50,8 @@ export const SKILLS = [
       { skill: "Visual Studio Code", percentage: "75%" },
       { skill: "DBeaver", percentage: "70%" },
       { skill: "Docker", percentage: "50%" },
-      { skill: "Postman", percentage: "70%" },
-      { skill: "Insomnia", percentage: "40%" },
+      { skill: "Postman", percentage: "50%" },
+      { skill: "Insomnia", percentage: "50%" },
     ],
   },
   {
@@ -70,7 +73,7 @@ export const PROJECTS = [
     title: "XML_Parsing - RPC_Server",
     imageUrl: "/assets/images/xml.png",
     description:
-      "XML file into a relational database. First we have a non-relational database, where we make X-Path queries. Then the data is processed, and goes into a relational database. API's where created to make queries.",
+      "XML file uploaded to a relational database. First we have a non-relational database, where we make X-Path queries. Then the data is processed, and goes into a relational database. API's where created to make queries.",
     githubUrl: "https://github.com/DiogoBernardes/TP2-IS",
     videoUrl: "https://youtu.be/s4XdCShQvlY",
   },
@@ -134,6 +137,33 @@ export const PROJECTS = [
       "In cooperation with Borgwarner, this project was degined to investigate applications that provided usefull insights in testing of web apps, in this case a Python web app. ",
     githubUrl: "https://github.com/diogoPinheiro11/borgwarner-test-app",
   },
+  {
+    title: "Money Map",
+    description:
+      "expense management application developed with React and Prisma, helping you monitor and organize your finances in a simple and intuitive way. ",
+    githubUrl: "https://github.com/kromenz/Money-Map",
+  },
+  {
+    title: "n2yo-api example",
+
+    description:
+      "Micro service in Node + Typescript, in which the n2yo API is consumed, exposing a simple endpoint. ",
+    githubUrl: "https://github.com/kromenz/n2yo-api",
+  },
+  {
+    title: "Face-Detection — Real-time detection, tracking & recognition",
+    imageUrl: "/assets/images/face_det.png",
+    description:
+      "A small, practical project that runs real-time face detection → landmark refinement → tracking → recognition with a focus on being fast and configurable. It uses a hybrid approach: a fast detector (OpenCV Haar), landmark-based refinement, lightweight trackers (KCF/CSRT) and face_recognition encodings for identity matching. Includes a persistent cache for face encodings so you don't re-encode images every run. ",
+    githubUrl: "https://github.com/kromenz/Face-Detection",
+  },
+  {
+    title: "Magic Graph / Reports",
+    imageUrl: "/assets/images/magic.png",
+    description:
+      "Small demo project. It collects collectible-card data (example: Scryfall for Magic: The Gathering), stores it in Neo4J, and produces a PDF report rendered from HTML using Node + TypeScript and Puppeteer.",
+    githubUrl: "https://github.com/kromenz/magic-graph-report",
+  },
 ];
 
 export const WORK_EXPERIENCE = [
@@ -166,7 +196,7 @@ export const WORK_EXPERIENCE = [
   },
   {
     title: "BorgWarner (Professional Internship)",
-    date: "Sep 2024 - Present",
+    date: "Sep 2024 - Jun 2025",
     responsibilities: [
       "I am continuing my internship at BorgWarner, focusing on the development of a new project, Maintenance Management System (MMS). This system streamlines all aspects of factory maintenance.",
 

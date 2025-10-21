@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ProjectsCard.css";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,20 +10,44 @@ const ProjectsCard = ({
   githubUrl,
   videoUrl,
 }) => {
+  const [imgError, setImgError] = useState(false);
+  const hasImage = Boolean(imageUrl && !imgError);
+
   return (
     <div className="projects-card">
-      <img src={imageUrl} alt={title} className="project-image" />
+      <div className="project-media">
+        {hasImage ? (
+          <img
+            src={imageUrl}
+            alt={title}
+            className="project-image"
+            onError={() => setImgError(true)}
+            loading="lazy"
+          />
+        ) : (
+          <div
+            className="project-no-image"
+            role="img"
+            aria-label={`Sem imagem}`}></div>
+        )}
+      </div>
+
       <div className="project-details">
         <h3>{title}</h3>
         <p>{description}</p>
+
         <a
           href={githubUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="project-link">
-          View on GitHub
-          <FontAwesomeIcon icon={faGithub} className="github-icon" />
+          className="project-link project-link--pill"
+          aria-label={`Open ${title} on GitHub`}>
+          <span className="project-link__text">View on GitHub</span>
+          <span className="project-link__icon" aria-hidden="true">
+            <FontAwesomeIcon icon={faGithub} />
+          </span>
         </a>
+
         {videoUrl && (
           <div className="project-video-indicator">
             <a

@@ -7,6 +7,12 @@
   backdrop-filter: blur(50px);
 }
 
+.name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+}
+
 .anchor-link {
   text-decoration: none;
   color: white;
@@ -16,14 +22,9 @@
   max-width: 1300px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 1rem 0;
   margin: 0 auto;
-}
-
-.logo {
-  width: 11em;
-  height: auto;
 }
 
 .nav-content ul {
@@ -34,6 +35,9 @@
 }
 
 .nav-content li {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
   margin: 0 1.5rem;
 }
 
@@ -65,9 +69,9 @@
   opacity: 1;
 }
 
-.contact-btn {
-  font-size: 0.9rem;
-  font-weight: 500;
+.cv-btn {
+  font-size: 0.88rem;
+  font-family: "JetBrains Mono", monospace !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,10 +85,10 @@
   transition: all 0.3s ease;
 }
 
-.contact-btn:hover {
-  color: #a993fe;
-  background: #000;
-  outline: 1.5px solid #a993fe;
+.cv-btn:hover {
+  color: white;
+  background: #181335;
+  outline: 1.5px solid white;
 }
 
 .menu-btn {
