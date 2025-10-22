@@ -37,6 +37,28 @@
   margin-left: -2rem;
 }
 
+.cv-btn {
+  font-size: 0.88rem;
+  font-family: "JetBrains Mono", monospace !important;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: #fff;
+  background: linear-gradient(90deg, #a993fe 0%, #7e61e7 100%);
+  padding: 0.6rem 2rem;
+  border: none;
+  outline: 1.5px solid transparent;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cv-btn:hover {
+  color: white;
+  background: #181335;
+  outline: 1.5px solid white;
+}
+
 @media (max-width: 769px) {
   .mobile-menu {
     display: block;

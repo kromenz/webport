@@ -1,33 +1,33 @@
+:root {
+  --avatar-size: clamp(9rem, 22vw, 25rem);
+  --ring-gap: clamp(1rem, 4vw, 3.25rem);
+  --ring-scale-pad: calc(2 * var(--ring-gap));
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .hero-container {
   display: flex;
   align-items: center;
   position: relative;
-}
-
-.hero-container::after,
-.hero-container::before {
-  content: " ";
-  width: 28.125rem;
-  height: 28.125rem;
-  border-radius: 28.125rem;
-  background: #7c66e3;
-  position: absolute;
-  z-index: -1;
-  filter: blur(255px);
-}
-
-.hero-container::after {
-  top: -3rem;
-  left: -5rem;
-}
-
-.hero-container::before {
-  bottom: 2rem;
-  right: 0rem;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .hero-content {
   flex: 1;
+  min-width: 320px;
 }
 
 .hero-content h2 {
@@ -37,143 +37,132 @@
   margin-bottom: 1rem;
 }
 
-.hero-content p {
-  width: 80%;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 2rem;
-}
-
-.hero-img {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  margin-top: 5rem;
-}
-
-.hero-img > div {
-  display: flex;
-  align-items: flex-end;
-  gap: 2rem;
-}
-
-.hero-img > div > img {
-  width: 25rem;
-  transition: all 0.3s ease;
-}
-
-.tech-icon {
-  width: 5rem;
-  height: 5rem;
+.hero {
+  flex: 1 1 260px;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  border-radius: 0.65rem;
-  border: 1.5px solid #6852ba;
+  position: relative;
+  min-width: 260px;
+  min-height: 260px;
 }
 
-.tech-icon img {
-  width: 3rem;
-  height: auto;
-  transition: all 0.3s ease;
+.image {
+  position: relative;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.hero-img > div > img:hover,
-.tech-icon img:hover {
-  transform: translateY(-0.5rem);
+.image-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
-@media (max-width: 1025px) {
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  -webkit-mask-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(0, 0, 0, 1) 72%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(0, 0, 0, 1) 72%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.avatar-ring {
+  position: absolute;
+  inset: -10%;
+  width: 120%;
+  height: 120%;
+  pointer-events: none;
+  z-index: 1;
+}
+.avatar-ring svg,
+.avatar-ring > * {
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --avatar-size: 20rem;
+    --ring-gap: 2.5rem;
+  }
+
   .hero-content h2 {
     font-size: 3rem;
     line-height: 4rem;
   }
-
-  .hero-content p {
-    font-size: 0.9rem;
-    line-height: 1.6rem;
+  .hero-content {
+    margin-top: 1.8rem;
+    order: 1;
+    width: 100%;
+    max-width: 720px;
+  }
+  .hero {
+    margin-top: 2rem;
+    width: 100%;
+    min-width: 0;
+    min-height: auto;
+  }
+  .image {
+    margin: 0;
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    max-width: 100%;
   }
 
-  .hero-img > div > img {
-    width: 20rem;
-  }
-
-  .tech-icon {
-    width: 4rem;
-    height: 4rem;
-  }
-  .tech-icon img {
-    width: 2.5rem;
+  :root {
+    --ring-gap: clamp(0.6rem, 4vw, 1.6rem);
   }
 }
 
 @media (max-width: 768px) {
+  :root {
+    --avatar-size: 18rem;
+    --ring-gap: 2rem;
+  }
+
   .hero-container {
     flex-direction: column;
+    gap: 1.25rem;
+    padding: 1rem;
+    align-items: center;
   }
-  .hero-img {
-    margin: 2rem 0 2rem 0;
-  }
-
-  .hero-container h2 {
-    margin-top: 3rem;
-  }
-
   .hero-content h2,
   .hero-content p {
     width: auto;
     text-align: center;
   }
-
-  .hero-container::after,
-  .hero-container::before {
-    content: " ";
-    width: 18rem;
-    height: 18rem;
-  }
-
-  .hero-container::after {
-    top: 0rem;
-    left: 0rem;
-  }
-  .hero-container:before {
-    bottom: 2rem;
-    right: 0rem;
-  }
 }
 
-@media (max-width: 600px) {
-  .hero-container h2 {
-    font: 2.2rem;
+@media (max-width: 480px) {
+  :root {
+    --avatar-size: 14.5rem;
+    --ring-gap: 1.2rem;
+  }
+
+  .hero-content h2 {
+    font-size: 2.2rem;
     line-height: 3rem;
-  }
-
-  .hero-content p {
-    line-height: 1.3rem;
-    font-size: 0.8rem;
-  }
-
-  .hero-img {
-    gap: 1rem;
-  }
-
-  .hero-img > div {
-    gap: 1rem;
-  }
-
-  .hero-img > div > img {
-    width: 16rem;
-  }
-
-  .tech-icon {
-    width: 3.3rem;
-    height: 3.3rem;
-  }
-
-  .tech-icon img {
-    width: 2rem;
   }
 }

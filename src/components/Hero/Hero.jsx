@@ -22,6 +22,7 @@ const Hero = () => {
       <div className="hero-content">
         <h2 className="text-white">
           Hello I'm
+          <br />
           <ShinyText
             text="Rafael André"
             disabled={false}
@@ -37,25 +38,68 @@ const Hero = () => {
           className="animated-text"
         />
       </div>
-      <div className="hero-img">
-        <div>
-          <div className="tech-icon">
-            <img src="./assets/images/atom.png" alt="" />
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: { delay: 0.5, duration: 0.6, ease: "easeInOut" },
+        }}
+        className="hero">
+        <div className="image">
+          <div className="avatar">
+            <img src="./assets/images/ai_profile.jpg" alt="Rafael André" />
           </div>
-          <img src="./assets/images/ai_profile.jpg" alt="" />
+
+          <motion.svg
+            className="avatar-ring"
+            viewBox="-2 -2 104 104"
+            preserveAspectRatio="xMidYMid meet"
+            initial={{ rotate: 0 }}
+            animate={{ rotate: 360 }}
+            transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+            aria-hidden>
+            <defs>
+              <linearGradient
+                id="ringGradOuter"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%">
+                <stop offset="0%" stopColor="#7c66e3" stopOpacity="0.4" />
+                <stop offset="100%" stopColor="#ffffff" />
+              </linearGradient>
+            </defs>
+
+            <motion.circle
+              cx="50"
+              cy="50"
+              r="50"
+              fill="none"
+              stroke="url(#ringGradOuter)"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              initial={{ strokeDasharray: "24 10 0 0" }}
+              animate={{
+                strokeDasharray: [
+                  "15 120 25 25",
+                  "16 25 92 72",
+                  "4 250 22 22",
+                  "16 10 6 12",
+                ],
+              }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "linear",
+              }}
+              style={{ transformBox: "fill-box", transformOrigin: "50% 50%" }}
+            />
+          </motion.svg>
         </div>
-        <div>
-          <div className="tech-icon">
-            <img src="./assets/images/html.png" alt="" />
-          </div>
-          <div className="tech-icon">
-            <img src="./assets/images/css-3.png" alt="" />
-          </div>
-          <div className="tech-icon">
-            <img src="./assets/images/js.png" alt="" />
-          </div>
-        </div>
-      </div>
+      </motion.div>
     </motion.section>
   );
 };

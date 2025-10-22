@@ -35,6 +35,7 @@ const Navbar = () => {
                 <motion.a className="menu-item">Home</motion.a>
               </AnchorLink>
             </motion.li>
+
             <motion.li
               variants={menuItemVariants}
               initial="hidden"
