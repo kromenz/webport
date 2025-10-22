@@ -139,13 +139,13 @@ export const PROJECTS = [
   },
   {
     title: "Money Map",
+    imageUrl: "/assets/images/moneymap.png",
     description:
       "expense management application developed with React and Prisma, helping you monitor and organize your finances in a simple and intuitive way. ",
     githubUrl: "https://github.com/kromenz/Money-Map",
   },
   {
     title: "n2yo-api example",
-
     description:
       "Micro service in Node + Typescript, in which the n2yo API is consumed, exposing a simple endpoint. ",
     githubUrl: "https://github.com/kromenz/n2yo-api",
