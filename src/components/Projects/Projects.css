@@ -49,6 +49,8 @@
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 3rem;
+  justify-content: center;
+  display: flex;
 }
 
 .projects-grid {

@@ -6,16 +6,24 @@
 .experience-container h5 {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 3rem;
+  margin: 0;
+  text-align: center;
 }
 
 .experience-header {
+  position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
 }
 
 .sort-button {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
   background-color: #6751b9;
   color: white;
   border: none;
@@ -23,6 +31,7 @@
   padding: 0.5rem 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  z-index: 2;
 }
 
 .sort-button:hover {
@@ -114,6 +123,16 @@
   .experience-container h5 {
     font-size: 1.3rem;
     margin-bottom: 2rem;
+  }
+  .experience-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .sort-button {
+    position: static;
+    transform: none;
+    right: auto;
+    top: auto;
   }
 }
 

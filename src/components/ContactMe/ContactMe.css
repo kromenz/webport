@@ -1,25 +1,94 @@
 .contact-container {
-  margin: 4rem 0;
+  margin: 5rem 0;
   position: relative;
+  padding: 0 1rem;
 }
 
 .contact-container h5 {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
 }
 
+/* Layout principal */
 .contact-content {
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center; /* centra o conjunto */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* GIF */
+.contact-gif {
+  flex: 0 0 auto; /* não cresce, não encolhe */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px; /* tamanho fixo confortável no desktop */
+  min-width: 140px;
+}
+.contact-gif img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 260px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Form wrapper: centra e dá largura maior ao form */
+.form-wrap {
+  flex: 1 1 60%; /* ocupa o resto, responsivo */
+  max-width: 720px; /* largura máxima */
+  width: clamp(320px, 56vw, 720px); /* ligeiramente mais largo e responsivo */
+  box-sizing: border-box;
+}
+
+/* Se o ContactForm tiver width:100% funciona bem; senão força */
+.form-wrap > * {
+  width: 100%;
+}
+
+/* Responsivo */
+@media (max-width: 980px) {
+  .contact-gif {
+    width: 180px;
+    min-width: 120px;
+  }
+  .contact-gif img {
+    max-height: 200px;
+  }
+  .contact-container h5 {
+    font-size: 1.35rem;
+    margin-bottom: 1.75rem;
+  }
 }
 
 @media (max-width: 768px) {
   .contact-content {
     flex-direction: column-reverse;
+    gap: 1.25rem;
+    align-items: center;
   }
+
+  .contact-gif {
+    display: none;
+  }
+
   .contact-container h5 {
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-wrap {
+    width: 100%;
+    max-width: 640px;
+    padding: 0 0.5rem;
   }
 }

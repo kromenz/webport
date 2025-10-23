@@ -37,6 +37,8 @@ const Hero = () => {
           threshold={0.3}
           className="animated-text"
         />
+
+        <div className="socials">Socials</div>
       </div>
 
       <motion.div
